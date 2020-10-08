@@ -1,0 +1,15 @@
+Use N4_th executable file given here to perform the Bias Correction of any input file.
+
+After downloading "N4_th" file, change the file to be executable using: chmod +x N4_th
+The bias correction usage command is:
+./N4_th <input_image_path> <output_bias_corrected_image_path> <threshold_value>
+Example, if threshold value is 0.001:
+./N4_th input_image.nii output_image.nii 0.001
+
+input_image.nii --> is the image with bias fields
+output_image.nii --> is the bias corrected image
+
+For the ACDC dataset, we used the threshold value of 0.001, fitting levels as 4, no. of iterations as 50, and did not use any mask information.
+
+If you want to alter the above values like fitting levels, no. of iterations and others, please check the below link with sample code:
+https://simpleitk.readthedocs.io/en/master/link_N4BiasFieldCorrection_docs.html
